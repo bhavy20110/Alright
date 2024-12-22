@@ -51,8 +51,7 @@
         const params = new URLSearchParams(window.location.search);
         const streamUrl = decodeURIComponent(params.get('url'));
         const channelName = decodeURIComponent(params.get('name'));
-        const httpUrl = `http://m3umergersplayer.sportsontheweb.net/pro-player.html?url=${encodeURIComponent(streamUrl)}&name=${encodeURIComponent(channelName)}`;
-
+        const httpUrl = `http://m3umergersplayer.sportsontheweb.net/pro-player.html?url=${encodeURIComponent(streamUrl)}&name=${encodeURIComponent(channelName)}`
         const redirectButton = document.getElementById('redirectButton');
         redirectButton.addEventListener('click', () => {
             window.location.href = httpUrl;
@@ -63,15 +62,6 @@
     <h1>Redirecting to Player Page...</h1>
 
     <script>
-        // Automatically redirect based on query parameters
-        const params = new URLSearchParams(window.location.search);
-        const streamUrl = decodeURIComponent(params.get('url'));
-        const channelName = decodeURIComponent(params.get('name'));
-        const httpUrl = http://m3umergersplayer.sportsontheweb.net/pro-player.html?url=${encodeURIComponent(streamUrl)}&name=${encodeURIComponent(channelName)};
-        const redirectButton = document.getElementById('redirectButton');
-        redirectButton.addEventListener('click', () => {
-            window.location.href = httpUrl;
-        });
         // Redirect immediately
         window.location.href = httpUrl;
     </script>
