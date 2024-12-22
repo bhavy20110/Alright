@@ -43,6 +43,20 @@
         h1 {
             margin-bottom: 20px;
         }
+          <!-- Redirect Button -->
+    <button class="redirect-button" id="redirectButton">Redirect to Player Page</button>
+
+    <script>
+        // Redirect button functionality
+        const params = new URLSearchParams(window.location.search);
+        const streamUrl = decodeURIComponent(params.get('url'));
+        const channelName = decodeURIComponent(params.get('name'));
+        const httpUrl = `http://m3umergersplayer.sportsontheweb.net/pro-player.html?url=${encodeURIComponent(streamUrl)}&name=${encodeURIComponent(channelName)}`;
+
+        const redirectButton = document.getElementById('redirectButton');
+        redirectButton.addEventListener('click', () => {
+            window.location.href = httpUrl;
+        });
     </style>
 </head>
 <body>
