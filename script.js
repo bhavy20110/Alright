@@ -124,6 +124,6 @@ document.getElementById('next-page').addEventListener('click', () => {
 
 // Play stream with proxy
 function playStream(url, name) {
-    const proxyUrl = `http://m3umergersplayer2.sportsontheweb.net/player.html?url=${encodeURIComponent(url)}&name=${encodeURIComponent(name)}`;
+    const proxyUrl = `http://m3umergersplayer2.sportsontheweb.net/player.html?url=${encodeURIComponent(url)}&name=${encodeURIComponent(name)}';
     window.location.href = proxyUrl;
   }
